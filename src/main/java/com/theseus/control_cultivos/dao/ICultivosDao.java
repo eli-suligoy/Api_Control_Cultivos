@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface ICultivosDao extends JpaRepository<Cultivos, Integer> {
     @Query("select c from Cultivos c where c.descrip like ?1")
-    public List<Cultivos> findByDescrip(String name);
+    public List<Cultivos> findByDescrip(String descrip);
 }

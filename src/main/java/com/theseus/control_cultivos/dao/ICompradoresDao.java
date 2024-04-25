@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface ICompradoresDao extends JpaRepository<Compradores, Integer> {
     @Query("select c from Compradores c where c.nombre like ?1")
-    public List<Compradores> findByNombre(String name);
+    public List<Compradores> findByNombre(String nombre);
 }
