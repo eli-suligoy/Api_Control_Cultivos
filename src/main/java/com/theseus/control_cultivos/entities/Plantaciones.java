@@ -3,6 +3,7 @@ package com.theseus.control_cultivos.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -13,9 +14,9 @@ public class Plantaciones implements Serializable {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String periodo;
-    private Date fecha;
+    private LocalDate fecha;
     private double porcentajelote;
-    private Date fechacierre;
+    private LocalDate fechacierre;
 
     @JoinColumn(name = "fk_cultivo", referencedColumnName = "id", nullable = false)
     @ManyToOne
@@ -41,11 +42,11 @@ public class Plantaciones implements Serializable {
         this.periodo = periodo;
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
@@ -57,11 +58,11 @@ public class Plantaciones implements Serializable {
         this.porcentajelote = porcentajelote;
     }
 
-    public Date getFechacierre() {
+    public LocalDate getFechacierre() {
         return fechacierre;
     }
 
-    public void setFechacierre(Date fechacierre) {
+    public void setFechacierre(LocalDate fechacierre) {
         this.fechacierre = fechacierre;
     }
 
