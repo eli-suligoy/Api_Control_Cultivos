@@ -68,11 +68,7 @@ public class PlantacionesController {
     @GetMapping(path = "/plantaciones/getperiodocultivo/{periodo}/{cultivo}")
     public List<Plantaciones> getListPeriodoCultivo(@PathVariable String periodo,@PathVariable Integer cultivo) {
         Cultivos c = cultivoService.get(cultivo);
-        return null;
-        //System.out.println(periodo.replace("-", "/"));
-        //return entityService.getPeriodoCultivo(periodo.replace("-", "/"),c);
+        return entityService.getPeriodoCultivo(periodo.replace("-", "/"),c);
     }
-
-
 
 }

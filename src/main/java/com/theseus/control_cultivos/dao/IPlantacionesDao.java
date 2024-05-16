@@ -27,4 +27,3 @@ public interface IPlantacionesDao extends JpaRepository<Plantaciones, String> {
 
 }
 
-    //Todas las Plantaciones para un determinado Periodo – Cultivo.
