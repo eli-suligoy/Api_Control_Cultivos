@@ -60,5 +60,7 @@ public class VentasController {
         return entityService.getAllCompradorFecha(desde,hasta,c);
     }
 
+    //El Total de Ventas Realizado por un Comprador entre dos Fechas.
+
 
 }

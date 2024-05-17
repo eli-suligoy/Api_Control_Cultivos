@@ -21,5 +21,3 @@ public interface IVentasDao extends JpaRepository <Ventas, String> {
     public List<Ventas> getAllCompradorFecha(LocalDate dFecha, LocalDate hFecha, Compradores comprador);
 }
 
-//Todas las Ventas Realizadas por un Determinado Comprador entre dos
-//Fechas.
