@@ -60,7 +60,13 @@ public class VentasController {
         return entityService.getAllCompradorFecha(desde,hasta,c);
     }
 
-    //El Total de Ventas Realizado por un Comprador entre dos Fechas.
+    @GetMapping(path = "/ventas/gettotalventas/{dfecha}/{hfecha}/{comprador}")
+    public double getdoubleventas(@PathVariable String dfecha, @PathVariable String hfecha, @PathVariable Integer comprador) {
+        LocalDate desde = LocalDate.parse(dfecha);
+        LocalDate hasta = LocalDate.parse(hfecha);
+        Compradores c = compradoresService.get(comprador);
+        return entityService.getTotalVentas(desde,hasta,c);
+    }
 
 
 }

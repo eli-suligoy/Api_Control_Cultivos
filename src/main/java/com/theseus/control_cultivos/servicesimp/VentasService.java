@@ -30,6 +30,10 @@ public class VentasService implements IVentasService {
         return entityDao.getAllCompradorFecha(dFecha, hFecha, comprador);
     }
 
+    public double getTotalVentas(LocalDate dFecha, LocalDate hFecha, Compradores comprador) {
+        return entityDao.getTotalVentas(dFecha, hFecha, comprador);
+    }
+
     public Ventas get(String id) {
         return entityDao.findById(id).orElse(null);
     }

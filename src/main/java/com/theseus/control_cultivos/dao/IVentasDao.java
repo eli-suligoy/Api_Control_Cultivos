@@ -19,5 +19,8 @@ public interface IVentasDao extends JpaRepository <Ventas, String> {
 
     @Query("select c from Ventas c where c.fecha between ?1 and ?2 and c.comprador = ?3 order by c.fecha")
     public List<Ventas> getAllCompradorFecha(LocalDate dFecha, LocalDate hFecha, Compradores comprador);
+
+    @Query("select sum(c.precio) from Ventas c where c.fecha between ?1 and ?2 and c.comprador = ?3 order by c.fecha")
+    public double getTotalVentas(LocalDate dFecha, LocalDate hFecha, Compradores comprador);
 }
 

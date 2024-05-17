@@ -13,6 +13,7 @@ public interface IVentasService {
     List<Ventas> getAll();
     List<Ventas> findByFecha(Date fecha);
     List<Ventas> getAllCompradorFecha(LocalDate dFecha, LocalDate hFecha, Compradores comprador);
+    double getTotalVentas(LocalDate dFecha, LocalDate hFecha, Compradores comprador);
     Ventas get(String id);
     void save(Ventas entity);
     String delete(Ventas entity);
